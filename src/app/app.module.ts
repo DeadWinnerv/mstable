@@ -6,8 +6,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSortModule } from '@angular/material/sort';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IssuesComponent } from './components/issues/issues.component';
 import { TableComponent } from './components/table/table.component';
@@ -22,7 +20,6 @@ import { LoaderComponent } from './components/ui/loader/loader.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
