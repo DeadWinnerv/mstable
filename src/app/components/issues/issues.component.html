@@ -1,0 +1,16 @@
+<div class="wrapper">
+	<div class="modal" *ngIf="!isLoading">
+		<h2 class="modal__title"> {{ repositoryName }} issues</h2>
+		<mat-icon class="modal__close" (click)="closeModal()">close</mat-icon>
+		<ul class="issues_list">
+			<li class="issues_list__issue" *ngFor="let issue of issues">
+				<h2 class="issue_title">{{issue.title}}</h2>
+				<div class="issue_body">
+					<span class="issue_body__date">{{issue.updated_at | date:"dd MMMM yyyy hh:mm"}}</span>
+					<p class="issue_body__text">{{issue.body}}</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<app-loader *ngIf="isLoading"></app-loader>
+</div>
